@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>我的遊戲</title>
+  <title>點擊目標遊戲（Brython）</title>
+
+  <!-- Brython 核心 -->
+  <script src="https://cdn.jsdelivr.net/npm/brython@3.12.2/brython.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/brython@3.12.2/brython_stdlib.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+    }
+  </style>
 </head>
-<body>
 
-<canvas id="game" width="400" height="400"></canvas>
+<body onload="brython()">
+  <h1>點擊目標遊戲</h1>
 
-<script src="game.js"></script>
+  <!-- ⚠️ 你的 Python 程式用到的 div -->
+  <div id="brython_div1"></div>
+
+  <!-- 載入你的 Brython 遊戲 -->
+  <script type="text/python" src="game.py"></script>
 </body>
 </html>
